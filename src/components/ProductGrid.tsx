@@ -1,39 +1,5 @@
 import ProductCard from "./ProductCard";
-import vape1 from "@/assets/vape-1.jpg";
-import vape2 from "@/assets/vape-2.jpg";
-import vape3 from "@/assets/vape-3.jpg";
-import vape4 from "@/assets/vape-4.jpg";
-
-const products = [
-  {
-    id: 1,
-    name: "Quantum X1",
-    price: 79.99,
-    image: vape1,
-    description: "Next-gen pod system with AI temperature control"
-  },
-  {
-    id: 2,
-    name: "Nebula Pro",
-    price: 99.99,
-    image: vape2,
-    description: "Premium device with holographic display"
-  },
-  {
-    id: 3,
-    name: "Cyber Mod Elite",
-    price: 149.99,
-    image: vape3,
-    description: "Advanced mod with customizable LED effects"
-  },
-  {
-    id: 4,
-    name: "Fusion Pen",
-    price: 59.99,
-    image: vape4,
-    description: "Compact and powerful with gradient finish"
-  },
-];
+import { products } from "@/data/products";
 
 const ProductGrid = () => {
   return (
@@ -50,7 +16,7 @@ const ProductGrid = () => {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
-            <ProductCard key={product.id} {...product} />
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </div>
