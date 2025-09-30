@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -7,6 +8,14 @@ import { useCart } from "@/contexts/CartContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { toast } from "@/hooks/use-toast";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 const Checkout = () => {
   const navigate = useNavigate();
@@ -34,14 +43,28 @@ const Checkout = () => {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <div className="container mx-auto px-4 py-24 text-center">
-          <h2 className="text-3xl font-bold mb-4 font-['Orbitron']">Your Cart is Empty</h2>
-          <p className="text-muted-foreground mb-8 font-['Rajdhani']">
-            Add some products to your cart before checking out
-          </p>
-          <Button onClick={() => navigate("/")} className="bg-primary hover:bg-primary-glow font-['Rajdhani']">
-            Continue Shopping
-          </Button>
+        <div className="container mx-auto px-4 py-24">
+          <Breadcrumb className="mb-8">
+            <BreadcrumbList className="font-['Rajdhani']">
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Cart Empty</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+          
+          <div className="text-center">
+            <h2 className="text-3xl font-bold mb-4 font-['Orbitron']">Your Cart is Empty</h2>
+            <p className="text-muted-foreground mb-8 font-['Rajdhani']">
+              Add some products to your cart before checking out
+            </p>
+            <Button onClick={() => navigate("/")} className="bg-primary hover:bg-primary-glow font-['Rajdhani']">
+              Continue Shopping
+            </Button>
+          </div>
         </div>
         <Footer />
       </div>
@@ -53,6 +76,29 @@ const Checkout = () => {
       <Header />
       
       <div className="container mx-auto px-4 py-24">
+        <div className="mb-8 flex items-center justify-between">
+          <Button 
+            onClick={() => navigate("/")} 
+            variant="ghost"
+            className="hover:text-primary font-['Rajdhani']"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Continue Shopping
+          </Button>
+          
+          <Breadcrumb>
+            <BreadcrumbList className="font-['Rajdhani']">
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Checkout</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+
         <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-cyber bg-clip-text text-transparent font-['Orbitron'] text-center">
           Checkout
         </h1>
