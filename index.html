@@ -1,27 +1,222 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flume Vapes - Premium Vaping Technology</title>
-    <meta name="description" content="Experience next-generation vaping with Flume Vapes' premium collection of vapes, mech mods, and e-liquids. Join our exclusive vape tricking events." />
-    <meta name="author" content="Flume Vapes" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flume Vapes - Premium vaping technology for the future. Next-generation vaping devices and e-liquids.">
+  <title>Flume Vapes - The Future is Here</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <div class="header-content">
+        <h1 class="logo">Flume Vapes</h1>
+        
+        <nav class="desktop-nav">
+          <a href="#shop">Shop</a>
+          <a href="#event">Event</a>
+          <a href="#bundle">Bundle Deal</a>
+        </nav>
 
-    <meta property="og:title" content="Flume Vapes - Premium Vaping Technology" />
-    <meta property="og:description" content="Experience next-generation vaping with Flume Vapes' premium collection of vapes, mech mods, and e-liquids." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+        <div class="header-actions">
+          <button class="cart-button" id="cart-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-count" id="cart-count">0</span>
+          </button>
+          
+          <button class="mobile-menu-button" id="mobile-menu-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+      <nav class="mobile-nav" id="mobile-nav">
+        <a href="#shop">Shop</a>
+        <a href="#event">Event</a>
+        <a href="#bundle">Bundle Deal</a>
+      </nav>
+    </div>
+  </header>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- Cart Dropdown -->
+  <div class="cart-dropdown" id="cart-dropdown">
+    <div class="cart-header">
+      <h3>Shopping Cart</h3>
+      <button class="cart-close" id="cart-close">×</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <p class="empty-cart">Your cart is empty</p>
+    </div>
+    <div class="cart-footer" id="cart-footer" style="display: none;">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <button class="checkout-button">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-gradient"></div>
+    <div class="container hero-content">
+      <h2 class="hero-title">The Future is Here</h2>
+      <p class="hero-text">Experience next-generation vaping technology with our premium collection</p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary" onclick="location.href='#shop'">Shop Now</button>
+        <button class="btn btn-secondary" onclick="location.href='#event'">Explore Collection</button>
+      </div>
+    </div>
+    <div class="hero-particles">
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+    </div>
+  </section>
+
+  <!-- Event Section -->
+  <section id="event" class="event-section">
+    <div class="event-bg"></div>
+    <div class="event-particles">
+      <div class="particle particle-3"></div>
+      <div class="particle particle-4"></div>
+    </div>
+    
+    <div class="container">
+      <div class="event-header">
+        <span class="event-badge">LIMITED TIME EVENT</span>
+        <h2 class="event-title">Cloud Masters Championship</h2>
+        <p class="event-subtitle">Exclusive Mech Mod Bundle for Serious Cloud Chasers & Trick Artists</p>
+      </div>
+
+      <div class="countdown" id="countdown">
+        <div class="countdown-item">
+          <div class="countdown-value" id="days">03</div>
+          <div class="countdown-label">days</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="hours">12</div>
+          <div class="countdown-label">hours</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="minutes">45</div>
+          <div class="countdown-label">minutes</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="seconds">30</div>
+          <div class="countdown-label">seconds</div>
+        </div>
+      </div>
+
+      <div class="event-banner">
+        <img src="src/assets/event-banner.jpg" alt="Vape Tricking Event">
+        <div class="event-banner-overlay"></div>
+      </div>
+
+      <div id="bundle" class="bundle-card">
+        <div class="bundle-content">
+          <div class="bundle-info">
+            <span class="bundle-badge">EXCLUSIVE BUNDLE</span>
+            <h3 class="bundle-title">Mech Mod Tricking Pack</h3>
+            <p class="bundle-description">Everything you need to dominate the cloud game. Three premium mechanical mods plus our signature high-VG juice for massive clouds.</p>
+            
+            <div class="bundle-features">
+              <div class="feature"><span class="bullet"></span>3x Premium Mechanical Mods</div>
+              <div class="feature"><span class="bullet"></span>1x 60ml High-VG Competition Juice</div>
+              <div class="feature"><span class="bullet"></span>Free Cloud Chasing Guide</div>
+              <div class="feature"><span class="bullet"></span>Limited Edition Carry Case</div>
+            </div>
+
+            <div class="bundle-pricing">
+              <span class="price-current">$299.99</span>
+              <span class="price-old">$459.99</span>
+              <span class="price-badge">SAVE 35%</span>
+            </div>
+
+            <button class="btn btn-primary btn-bundle">Get Bundle Now</button>
+          </div>
+
+          <div class="bundle-images">
+            <div class="bundle-img-large">
+              <img src="src/assets/mech-1.jpg" alt="Copper Mech Mod">
+            </div>
+            <div class="bundle-img-row">
+              <img src="src/assets/mech-2.jpg" alt="Steel Mech Mod">
+              <img src="src/assets/mech-3.jpg" alt="Titanium Mech Mod">
+            </div>
+            <div class="bundle-img-wide">
+              <img src="src/assets/juice-1.jpg" alt="Competition Juice">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-stats">
+        <div class="stat-card">
+          <div class="stat-value">$5K</div>
+          <p class="stat-label">Prize Pool</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">50+</div>
+          <p class="stat-label">Competitors</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">Live</div>
+          <p class="stat-label">Streaming Event</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="shop" class="products-section">
+    <div class="container">
+      <div class="products-header">
+        <h2 class="products-title">Featured Products</h2>
+        <p class="products-subtitle">Cutting-edge vaping technology for the modern enthusiast</p>
+      </div>
+      
+      <div class="products-grid" id="products-grid">
+        <!-- Products will be injected here by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <h3 class="footer-title">Flume Vapes</h3>
+      <p class="footer-text">Premium vaping technology for the future</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact</a>
+      </div>
+      <p class="footer-copyright">© 2025 Flume Vapes. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <strong id="toast-title"></strong>
+      <p id="toast-description"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
