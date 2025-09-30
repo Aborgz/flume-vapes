@@ -3,7 +3,7 @@ const Footer = () => {
     <footer className="border-t border-border/50 py-8 px-4 mt-20">
       <div className="container mx-auto text-center">
         <h3 className="text-2xl font-bold mb-4 bg-gradient-cyber bg-clip-text text-transparent font-['Orbitron']">
-          VapeVerse
+          Flume
         </h3>
         <p className="text-muted-foreground mb-4 font-['Rajdhani']">
           Premium vaping technology for the future
@@ -14,7 +14,7 @@ const Footer = () => {
           <a href="#" className="hover:text-primary transition-colors">Contact</a>
         </div>
         <p className="text-xs text-muted-foreground mt-6 font-['Rajdhani']">
-          © 2025 VapeVerse. All rights reserved.
+          © 2025 Flume. All rights reserved.
         </p>
       </div>
     </footer>
