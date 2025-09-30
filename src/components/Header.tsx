@@ -9,7 +9,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/">
             <h1 className="text-2xl md:text-3xl font-bold bg-gradient-cyber bg-clip-text text-transparent font-['Orbitron'] cursor-pointer">
-              Flume
+              Flume Vapes
             </h1>
           </Link>
           
