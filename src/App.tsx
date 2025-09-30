@@ -9,6 +9,7 @@ import ProductDetail from "./pages/ProductDetail";
 import BundleDetail from "./pages/BundleDetail";
 import Checkout from "./pages/Checkout";
 import Event from "./pages/Event";
+import ConversationLog from "./pages/ConversationLog";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/bundle" element={<BundleDetail />} />
             <Route path="/event" element={<Event />} />
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="/conversation-log" element={<ConversationLog />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
