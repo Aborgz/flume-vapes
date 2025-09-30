@@ -33,7 +33,7 @@ const ProductDetail = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <div className="container mx-auto px-4 py-24">
+      <div className="container mx-auto px-6 md:px-8 py-32">
         <Button 
           onClick={() => navigate("/")} 
           variant="ghost"
@@ -43,9 +43,9 @@ const ProductDetail = () => {
           Back to Shop
         </Button>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-16">
           {/* Image Gallery */}
-          <div className="space-y-4">
+          <div className="space-y-6">
             <div className="aspect-square overflow-hidden rounded-lg border border-border/50 bg-gradient-card">
               <img 
                 src={product.images[selectedImage]} 
@@ -76,7 +76,7 @@ const ProductDetail = () => {
           </div>
 
           {/* Product Info */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             <div>
               <p className="text-sm text-primary mb-2 font-['Rajdhani'] font-semibold">
                 {product.category}

@@ -17,7 +17,7 @@ const Event = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <div className="pt-24 pb-12">
+      <div className="pt-32 pb-20">
         {/* Hero Section */}
         <div className="relative h-[60vh] overflow-hidden">
           <img 
@@ -28,7 +28,7 @@ const Event = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
           
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="container mx-auto px-4 text-center">
+            <div className="container mx-auto px-6 md:px-8 text-center">
               <Badge className="mb-4 bg-accent text-accent-foreground px-6 py-2 text-lg font-['Rajdhani'] font-bold animate-glow-pulse">
                 LIMITED TIME EVENT
               </Badge>
@@ -50,7 +50,7 @@ const Event = () => {
         </div>
 
         {/* Event Details */}
-        <div className="container mx-auto px-4 py-12">
+        <div className="container mx-auto px-6 md:px-8 py-20">
           <Button 
             onClick={() => navigate("/")} 
             variant="ghost"
@@ -61,7 +61,7 @@ const Event = () => {
           </Button>
 
           {/* Key Info Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-24">
             <Card className="bg-gradient-card border-primary/50 p-6 text-center hover:shadow-neon transition-all">
               <Calendar className="h-8 w-8 text-primary mx-auto mb-3" />
               <h3 className="font-bold font-['Orbitron'] mb-2">Date</h3>
@@ -88,8 +88,8 @@ const Event = () => {
           </div>
 
           {/* About the Event */}
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-cyber bg-clip-text text-transparent font-['Orbitron'] text-center">
+          <div className="mb-24">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-cyber bg-clip-text text-transparent font-['Orbitron'] text-center">
               About the Championship
             </h2>
             <Card className="bg-gradient-card border-border/50 p-8 md:p-12">
@@ -126,11 +126,11 @@ const Event = () => {
           </div>
 
           {/* Trick Gallery */}
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-cyber bg-clip-text text-transparent font-['Orbitron'] text-center">
+          <div className="mb-24">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-cyber bg-clip-text text-transparent font-['Orbitron'] text-center">
               Featured Tricks
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card className="bg-gradient-card border-border/50 overflow-hidden hover:border-primary/50 transition-all group">
                 <img 
                   src={cloudTricks} 
@@ -162,8 +162,8 @@ const Event = () => {
           </div>
 
           {/* YouTube Video Section */}
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-cyber bg-clip-text text-transparent font-['Orbitron'] text-center">
+          <div className="mb-24">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-cyber bg-clip-text text-transparent font-['Orbitron'] text-center">
               Learn the Tricks
             </h2>
             <Card className="bg-gradient-card border-primary/30 p-4 shadow-neon-strong">

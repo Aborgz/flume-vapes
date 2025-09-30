@@ -28,11 +28,11 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
         
-        <div className="p-6">
-          <h3 className="text-xl font-bold mb-2 text-foreground font-['Orbitron'] group-hover:text-primary transition-colors">
+        <div className="p-8">
+          <h3 className="text-xl font-bold mb-3 text-foreground font-['Orbitron'] group-hover:text-primary transition-colors">
             {product.name}
           </h3>
-          <p className="text-sm text-muted-foreground mb-4 font-['Rajdhani']">
+          <p className="text-sm text-muted-foreground mb-6 font-['Rajdhani'] leading-relaxed">
             {product.description}
           </p>
           <div className="flex items-center justify-between">
@@ -46,7 +46,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </div>
       </CardContent>
       
-      <CardFooter className="p-6 pt-0">
+      <CardFooter className="p-8 pt-0">
         <Button 
           className="w-full bg-primary hover:bg-primary-glow text-primary-foreground font-bold shadow-neon hover:shadow-neon-strong transition-all font-['Rajdhani']"
           onClick={(e) => {

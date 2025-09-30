@@ -75,7 +75,7 @@ const Checkout = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <div className="container mx-auto px-4 py-24">
+      <div className="container mx-auto px-6 md:px-8 py-32">
         <div className="mb-8 flex items-center justify-between">
           <Button 
             onClick={() => navigate("/")} 
@@ -99,16 +99,16 @@ const Checkout = () => {
           </Breadcrumb>
         </div>
 
-        <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-cyber bg-clip-text text-transparent font-['Orbitron'] text-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-cyber bg-clip-text text-transparent font-['Orbitron'] text-center">
           Checkout
         </h1>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Order Summary */}
-          <div className="bg-gradient-card border border-border/50 rounded-lg p-6 h-fit">
-            <h2 className="text-2xl font-bold mb-6 font-['Orbitron']">Order Summary</h2>
+          <div className="bg-gradient-card border border-border/50 rounded-lg p-8 h-fit">
+            <h2 className="text-2xl font-bold mb-8 font-['Orbitron']">Order Summary</h2>
             
-            <div className="space-y-4 mb-6">
+            <div className="space-y-6 mb-8">
               {cart.map((item) => (
                 <div key={item.id} className="flex gap-4">
                   <img 
@@ -146,10 +146,10 @@ const Checkout = () => {
           </div>
 
           {/* Checkout Form */}
-          <div className="bg-gradient-card border border-border/50 rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-6 font-['Orbitron']">Payment Information</h2>
+          <div className="bg-gradient-card border border-border/50 rounded-lg p-8">
+            <h2 className="text-2xl font-bold mb-8 font-['Orbitron']">Payment Information</h2>
             
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="name" className="font-['Rajdhani']">Full Name</Label>
                 <Input 

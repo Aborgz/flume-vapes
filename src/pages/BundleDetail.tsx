@@ -55,7 +55,7 @@ const BundleDetail = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <div className="container mx-auto px-4 py-24">
+      <div className="container mx-auto px-6 md:px-8 py-32">
         <Button 
           onClick={() => navigate("/")} 
           variant="ghost"
@@ -65,9 +65,9 @@ const BundleDetail = () => {
           Back to Shop
         </Button>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-16">
           {/* Image Gallery */}
-          <div className="space-y-4">
+          <div className="space-y-6">
             <Badge className="mb-2 bg-accent text-accent-foreground font-['Rajdhani'] font-bold">
               LIMITED TIME BUNDLE
             </Badge>
@@ -101,7 +101,7 @@ const BundleDetail = () => {
           </div>
 
           {/* Product Info */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-cyber bg-clip-text text-transparent font-['Orbitron']">
                 {bundleProduct.name}

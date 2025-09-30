@@ -1,14 +1,14 @@
 const Footer = () => {
   return (
-    <footer className="border-t border-border/50 py-8 px-4 mt-20">
+    <footer className="border-t border-border/50 py-16 px-6 md:px-8 mt-32">
       <div className="container mx-auto text-center">
-        <h3 className="text-2xl font-bold mb-4 bg-gradient-cyber bg-clip-text text-transparent font-['Orbitron']">
+        <h3 className="text-2xl font-bold mb-6 bg-gradient-cyber bg-clip-text text-transparent font-['Orbitron']">
           Flume Vapes
         </h3>
-        <p className="text-muted-foreground mb-4 font-['Rajdhani']">
+        <p className="text-muted-foreground mb-8 font-['Rajdhani'] leading-relaxed">
           Premium vaping technology for the future
         </p>
-        <div className="flex justify-center gap-6 text-sm text-muted-foreground font-['Rajdhani']">
+        <div className="flex justify-center gap-8 text-sm text-muted-foreground font-['Rajdhani']">
           <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
           <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
           <a href="#" className="hover:text-primary transition-colors">Contact</a>

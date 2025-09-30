@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg">
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-6 md:px-8 py-6">
         <div className="flex items-center justify-between">
           <Link to="/">
             <h1 className="text-2xl md:text-3xl font-bold bg-gradient-cyber bg-clip-text text-transparent font-['Orbitron'] cursor-pointer">
@@ -17,7 +17,7 @@ const Header = () => {
             </h1>
           </Link>
           
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-10">
             <a href="/#shop" className="text-foreground/80 hover:text-primary transition-colors font-['Rajdhani'] font-semibold">
               Shop
             </a>
@@ -29,7 +29,7 @@ const Header = () => {
             </Link>
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             <CartDropdown />
             
             <Button
@@ -45,7 +45,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-fade-in">
+          <nav className="md:hidden mt-6 pb-6 flex flex-col gap-6 animate-fade-in">
             <a 
               href="/#shop" 
               className="text-foreground/80 hover:text-primary transition-colors font-['Rajdhani'] font-semibold text-lg"
