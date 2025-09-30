@@ -25,6 +25,7 @@ const Hero = () => {
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary-glow text-primary-foreground font-bold shadow-neon-strong hover:shadow-neon-strong hover:scale-105 transition-all font-['Rajdhani'] text-lg"
+            onClick={() => window.location.href = '/#shop'}
           >
             Shop Now
           </Button>
@@ -32,6 +33,7 @@ const Hero = () => {
             size="lg" 
             variant="outline"
             className="border-secondary hover:border-secondary-glow hover:bg-secondary/10 text-secondary-foreground shadow-purple hover:scale-105 transition-all font-['Rajdhani'] text-lg"
+            onClick={() => window.location.href = '/#event'}
           >
             Explore Collection
           </Button>
