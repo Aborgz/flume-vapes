@@ -58,7 +58,10 @@ const TrickingEvent = () => {
 
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12">
-          <Badge className="mb-4 bg-accent text-accent-foreground px-4 py-2 text-sm font-['Rajdhani'] font-bold">
+          <Badge 
+            className="mb-4 bg-accent text-accent-foreground px-4 py-2 text-sm font-['Rajdhani'] font-bold cursor-pointer hover:bg-accent-glow transition-colors hover:scale-105"
+            onClick={() => navigate("/event")}
+          >
             LIMITED TIME EVENT
           </Badge>
           <h2 className="text-4xl md:text-6xl font-black mb-4 bg-gradient-cyber bg-clip-text text-transparent font-['Orbitron'] animate-glow-pulse">
